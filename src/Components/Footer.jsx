@@ -62,7 +62,11 @@ export default function Footer() {
                 </div>
           </div>
         </div>
+        
       </div>
+      <div className="boxes">
+          <p>© 2024 LLC "MATTRESSES NATURAL PRODUCT". All rights reserved.</p>
+        </div>
     </div>
   );
 }
