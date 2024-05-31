@@ -19,22 +19,26 @@ export default function Navbar() {
     setActiveindex(id);
   };
   const showLang = () => {
-    setShowLangs(!showLangs);
+    if(window.innerWidth>768){
+        setShowLangs(!showLangs);
+    }
   };
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
-
   const showMobileMenu = () => {
     setMenuOpen(!menuOpen);
   };
   const hideMenu = () => {
-    setMenuOpen(!menuOpen);
+    if(window.innerWidth<768){
+        setMenuOpen(!menuOpen);
+    }
   };
   const changLanguage = () =>{
     hideMenu();
+    showLang();
   }
   return (
     <div className="navbar">
@@ -73,22 +77,19 @@ export default function Navbar() {
               </button>
 
               <ul className={`language ${showLangs ? "click" : ""}`}>
-                <li className="language-item">
+                <li onClick={changLanguage} className="language-item">
                   {" "}
-                  <img src="Images/moon (1).png" alt="" /> <span>Uz</span>
+                  <img src="Images/uzbekistan.png" alt="" /> <span>UZ</span>
                 </li>
-                <li className="language-item">
+                <li onClick={changLanguage} className="language-item">
                   {" "}
-                  <img src="Images/moon (1).png" alt="" /> <span>Uz</span>
+                  <img src="Images/russia (2).png" alt="" /> <span>EN</span>
                 </li>
-                <li className="language-item">
+                <li onClick={changLanguage} className="language-item">
                   {" "}
-                  <img src="Images/moon (1).png" alt="" /> <span>Uz</span>
+                  <img src="Images/united-kingdom (2).png" alt="" /> <span>RU</span>
                 </li>
-                <li className="language-item">
-                  {" "}
-                  <img src="Images/moon (1).png" alt="" /> <span>Uz</span>
-                </li>
+              
               </ul>
             </div>
           </div>

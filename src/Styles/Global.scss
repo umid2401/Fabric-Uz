@@ -1,52 +1,68 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-$pColor:red;
-$colorLink:rgb(157,157,157);
-$h1Color:"red";
-$h2Color:"red";
-$h3Color:"red";
-$h4Color:"red";
-$buttonColor:"red";
-$bg1Color:"blue";
-$bg2Color:"blue";
+$pColor: red;
+$colorLink: rgb(157, 157, 157);
+$h1Color: "red";
+$h2Color: "red";
+$h3Color: "red";
+$h4Color: "red";
+$buttonColor: "red";
+$bg1Color: "blue";
+$bg2Color: "blue";
 @font-face {
-    font-family: "Montserrat";
-    src: url("../../public/Fonts/Montserrat-Regular.ttf"); 
+  font-family: "Montserrat";
+  src: url("../../public/Fonts/Montserrat-Regular.ttf");
 }
 $myFont: "Montserrat";
-@mixin wrapperStyle{
-    margin: 0 auto;
-    width: 95%;
-    
+@mixin wrapperStyle {
+  margin: 0 auto;
+  width: 95%;
 }
-@mixin flexStart{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+@mixin flexStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-@mixin flexBeetwen{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@mixin flexBeetwen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-@mixin styleh1{
-
+@mixin styleh1 {
 }
-@mixin styleh2{
-    
+@mixin styleh2 {
 }
-@mixin styleh3{
-    
+@mixin styleh3 {
 }
-@mixin styleh4{
-    
+@mixin styleh4 {
+    font-family: $myFont, Sans-serif;
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
 }
-@mixin stylep{
-
+@mixin stylep {
+  font-family: $myFont, Sans-serif;
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
 }
-@mixin stylebutton{
-
+@mixin stylebutton {
+}
+@mixin linkStyle {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: $myFont, Sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+  letter-spacing: -0.48px;
 }

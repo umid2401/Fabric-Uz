@@ -14,7 +14,7 @@
 }
 .navbar .navbar-wrapper .navs {
   width: 100%;
-  padding: 1rem 0.8rem;
+  padding: 1rem 0rem;
   background: transparent;
   display: none;
   display: flex;
@@ -42,7 +42,6 @@
   justify-content: flex-start;
   gap: 1.5rem;
   list-style-type: none;
-  text-decoration: none;
 }
 .navbar .navbar-wrapper .navs .navbar-left .navbar-links li .link {
   text-decoration: none;
@@ -61,7 +60,6 @@
   width: 0;
 }
 .navbar .navbar-wrapper .navs .navbar-left .navbar-links li .active {
-  color: black;
   opacity: 1;
   position: relative;
 }
@@ -70,7 +68,7 @@
   content: "";
   width: 100%;
   height: 2px;
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -118,14 +116,13 @@
   padding: 0.5rem;
 }
 .navbar .navbar-wrapper .navs .navbar-right .dropdown .language li {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin: 0.5rem 0;
   font-family: "Montserrat";
   font-size: 17px;
-}
-.navbar .navbar-wrapper .navs .navbar-right .dropdown .language li img {
-  width: 28px;
 }
 .navbar .navbar-wrapper .navs .navbar-right .dropdown .language.click {
   transform: translateY(0);
@@ -206,10 +203,10 @@
   }
   .navbar .navbar-wrapper .navs .menu-dropdown {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
     text-align: center;
-    gap: 0rem;
     height: 100vh;
     background: #f5f5f5;
   }
