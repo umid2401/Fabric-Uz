@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$pColor:red;
+$colorLink:rgb(157,157,157);
+$h1Color:"red";
+$h2Color:"red";
+$h3Color:"red";
+$h4Color:"red";
+$buttonColor:"red";
+$bg1Color:"blue";
+$bg2Color:"blue";
+@font-face {
+    font-family: "Montserrat";
+    src: url("../../public/Fonts/Montserrat-Regular.ttf"); 
+}
+$myFont: "Montserrat";
+@mixin wrapperStyle{
+    margin: 0 auto;
+    width: 95%;
+    
+}
+@mixin flexStart{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+@mixin flexBeetwen{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin styleh1{
+
+}
+@mixin styleh2{
+    
+}
+@mixin styleh3{
+    
+}
+@mixin styleh4{
+    
+}
+@mixin stylep{
+
+}
+@mixin stylebutton{
+
+}
