@@ -3,6 +3,8 @@ import "../Styles/Contact.scss";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Contact() {
   const position = [41.2936, 69.2401];
   const position2 = [37, 65];
@@ -48,6 +50,32 @@ export default function Contact() {
             <Popup position={position2}>Marhamat joylashuvimiz bilan tanishing!!</Popup>
           </Marker>
         </MapContainer>
+          </div>
+        </div>
+      </div>
+      <div className="info">
+        <div className="info-card">
+          <div className="info-img">
+          <FontAwesomeIcon className="icon" icon={faEnvelope} style={{color: "#e7311d"}} />
+          </div>
+          <div className="info-text">
+            <p><span>Email:</span> mattresses@info.uz</p>
+          </div>
+        </div>
+        <div className="info-card">
+          <div className="info-img">
+          <FontAwesomeIcon className="icon" icon={faPhone} style={{color: "#e7311d"}} />
+          </div>
+          <div className="info-text">
+            <p><span>Phone:</span> +9989456537865</p>
+          </div>
+        </div>
+        <div className="info-card">
+          <div className="info-img">
+          <FontAwesomeIcon className="icon" icon={faLocationDot} style={{color: "#e7311d"}} />
+          </div>
+          <div className="info-text">
+            <p><span>Address:</span> Denov, st A.Navoiy 96.</p>
           </div>
         </div>
       </div>

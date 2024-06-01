@@ -85,6 +85,40 @@
 .contact .contact-wrapper .content-right .map .leaflet-container {
   height: 720px;
 }
+.contact .info {
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  margin-bottom: 3rem;
+}
+.contact .info .info-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.contact .info .info-card .info-img .icon {
+  font-size: 2.5rem;
+}
+.contact .info .info-card .info-text p {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+}
+.contact .info .info-card .info-text p span {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+}
 
 @media screen and (max-width: 992px) {
   .contact .contact-wrapper {
@@ -118,8 +152,12 @@
   .contact .contact-wrapper .content-right .map .leaflet-container {
     height: 400px;
   }
+  .contact .info {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .contact .contact-wrapper {
     flex-wrap: wrap;
     padding: 3rem 0rem;
@@ -151,5 +189,16 @@
   }
   .contact .contact-wrapper .content-right .map .leaflet-container {
     height: 400px;
+  }
+  .info {
+    margin-bottom: 1rem !important;
+    padding-bottom: 0rem !important;
+    padding-top: 1rem !important;
+  }
+  .info .info-card {
+    gap: 1rem !important;
+  }
+  .info .info-card .info-img .icon {
+    font-size: 1.5rem !important;
   }
 }/*# sourceMappingURL=Contact.css.map */
