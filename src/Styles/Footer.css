@@ -168,15 +168,19 @@
   }
   .footer .footer-wrapper .footer-cards .card4 .btn-group form {
     justify-content: space-between;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0.5rem;
   }
   .footer .footer-wrapper .footer-cards .card4 .btn-group form .input {
-    width: 65%;
+    width: 60%;
+  }
+  .footer .footer-wrapper .footer-cards .card4 .btn-group form .input input {
+    width: 100%;
   }
   .footer .footer-wrapper .footer-cards .card4 .btn-group form .btn {
-    width: 35%;
+    width: 40%;
   }
   .footer .footer-wrapper .footer-cards .card4 .btn-group form .btn button {
+    width: 100%;
     padding: 0.5rem 1rem;
   }
 }/*# sourceMappingURL=Footer.css.map */
