@@ -95,7 +95,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
 }
 .footer .footer-wrapper .footer-cards .card4 .btn-group form {
   display: flex;
@@ -110,6 +109,20 @@
   outline: none;
   font-size: clamp(15px, 4vw, 17px);
   font-family: "Montserrat";
+}
+.footer .footer-wrapper .footer-cards .card4 .btn-group form .btn button {
+  border: none;
+  font-family: "Montserrat";
+  font-size: clamp(14px, 4vw, 15px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.8rem;
+  background: rgb(243, 37, 37);
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.footer .footer-wrapper .footer-cards .card4 .btn-group form .btn button:hover {
+  background: black;
 }
 .footer .boxes {
   padding: 1.5rem 0;
@@ -144,11 +157,14 @@
   .footer .footer-wrapper .footer-cards .card1 .logo-text p {
     margin-top: 0.5rem;
   }
-  .footer .footer-wrapper .footer-cards .card1, .footer .footer-wrapper .footer-cards .card2, .footer .footer-wrapper .footer-cards .card3, .footer .footer-wrapper .footer-cards .card4 {
+  .footer .footer-wrapper .footer-cards .card1, .footer .footer-wrapper .footer-cards .card2, .footer .footer-wrapper .footer-cards .card3 {
     width: 100%;
   }
-  .footer .footer-wrapper .footer-cards .card1 h4, .footer .footer-wrapper .footer-cards .card2 h4, .footer .footer-wrapper .footer-cards .card3 h4, .footer .footer-wrapper .footer-cards .card4 h4 {
+  .footer .footer-wrapper .footer-cards .card1 h4, .footer .footer-wrapper .footer-cards .card2 h4, .footer .footer-wrapper .footer-cards .card3 h4 {
     margin-bottom: 0.5rem;
+  }
+  .footer .footer-wrapper .footer-cards .card4 {
+    width: 100%;
   }
   .footer .footer-wrapper .footer-cards .card4 .btn-group form {
     justify-content: space-between;

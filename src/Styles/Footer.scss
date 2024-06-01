@@ -70,7 +70,7 @@
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
-                    overflow: hidden;
+        
                     form{
                         display: flex;
                         align-items: center;
@@ -136,14 +136,17 @@
                     }
                    
                 }
-                .card1, .card2, .card3, .card4{
+                .card1, .card2, .card3 {
                     width: 100%;
                     h4{
                         margin-bottom: .5rem;
                     }
                     
                 }
+
                 .card4{
+                    
+                    width: 100%;
                     .btn-group{
                         form{
                             justify-content: space-between;
