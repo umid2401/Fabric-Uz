@@ -34,11 +34,17 @@ $myFont: "Montserrat";
 @mixin styleh1 {
 }
 @mixin styleh2 {
+  font-family: $myFont, Sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  margin: 2rem 0;
 }
 @mixin styleh3 {
 }
 @mixin styleh4 {
-    font-family: $myFont, Sans-serif;
+  font-family: $myFont, Sans-serif;
   font-size: clamp(15px, 4vw, 17px);
   font-weight: bold;
   text-transform: capitalize;
@@ -53,7 +59,19 @@ $myFont: "Montserrat";
   line-height: 19px;
   opacity: 0.8;
 }
-@mixin stylebutton {
+@mixin buttonStyle {
+  border: none;
+  font-family: $myFont;
+  font-size: clamp(14px, 4vw, 15px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.8rem;
+  background: rgb(243, 37, 37);
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background: black;
+  }
 }
 @mixin linkStyle {
   text-decoration: none;

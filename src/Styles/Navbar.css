@@ -82,11 +82,12 @@
   position: fixed;
   top: 0;
   right: 5rem;
+  z-index: 1001;
 }
 .navbar .navbar-wrapper .navs .navbar-right .dropdown button {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   text-align: left;
   padding: 0.5rem 2rem;
   background: white;
@@ -111,9 +112,12 @@
 .navbar .navbar-wrapper .navs .navbar-right .dropdown .language {
   list-style: none;
   transform: translateY(-100%);
+  position: relative;
+  z-index: 999;
   transition: 0.3s ease-in-out;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
+  background: #fff;
 }
 .navbar .navbar-wrapper .navs .navbar-right .dropdown .language li {
   cursor: pointer;
@@ -192,6 +196,10 @@
 }
 .navbar .navbar-wrapper .navs .menu-dropdown .lang li:nth-child(1) {
   margin: 0;
+}
+
+.con {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {

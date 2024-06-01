@@ -66,10 +66,10 @@
             }
             .card4{
                 width: 35%;
-                
                 .btn-group{
                     width: 100%;
-                   
+                    display: flex;
+                    justify-content: space-between;
                     overflow: hidden;
                     form{
                         display: flex;
@@ -88,22 +88,12 @@
                         }
                         .btn{
                             button{
-                                border: none;
-                                font-family: $myFont;
-                                font-size: clamp(14px, 4vw, 15px);
-                                padding: .8rem 1.5rem;
-                                border-radius: 1.8rem;
-                                background: rgb(243, 37, 37);
-                                color: #f5f5f5;
-                                cursor: pointer;
-                                transition: 0.3s ease-in-out;
-                                &:hover{
-                                    background: black;
-                                }
+                                @include buttonStyle();
                             }
                         }
                     }
                 }
+                
             }
         }
        
