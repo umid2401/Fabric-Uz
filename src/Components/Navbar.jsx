@@ -29,10 +29,12 @@ export default function Navbar() {
     });
   }, []);
   const showMobileMenu = () => {
+    AOS.refresh();
     setMenuOpen(!menuOpen);
   };
   const hideMenu = () => {
     if(window.innerWidth<768){
+      
         setMenuOpen(!menuOpen);
     }
   };
@@ -97,7 +99,7 @@ export default function Navbar() {
             <img src="Images/menu3.png" alt="" />
           </div>
           {menuOpen && (
-            <div className="menu-dropdown">
+            <div className="menu-dropdown" data-aos={`${menuOpen?"zoom-in":"zoom-out"}`}>
               <div onClick={showMobileMenu} className="hide-menu">
                 <img src="Images/close.png" alt="Error" />
               </div>
@@ -113,10 +115,10 @@ export default function Navbar() {
               </ul>
               <ul className="lang">
                 <li onClick={changLanguage}>
-                <img src="Images/moon (1).png" alt="" /> <span>Uz</span>
+                <img src="Images/uzbekistan.png" alt="" /> <span>Uz</span>
                     </li>
-                <li onClick={changLanguage}><img src="Images/moon (1).png" alt="" /> <span>EN</span></li>
-                <li onClick={changLanguage}><img src="Images/moon (1).png" alt="" /> <span>RU</span></li>
+                <li onClick={changLanguage}><img src="Images/russia (2).png" alt="" /> <span>EN</span></li>
+                <li onClick={changLanguage}><img src="Images/united-kingdom (2).png" alt="" /> <span>RU</span></li>
               </ul>
             </div>
           )}
