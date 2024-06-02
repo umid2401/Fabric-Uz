@@ -67,17 +67,19 @@
   .info{
     @include wrapperStyle();
     @include flexBeetwen();
-    
     padding: 2rem 2rem;
     margin-bottom: 3rem;
     .info-card{
-
         @include flexStart();
-        gap: 2rem;
+        gap: 1rem;
         .info-img{
-            
             .icon{
                 font-size: 2.5rem;
+                transition: .3s ease-in-out;
+                &:hover{
+                    color: black !important;
+                    cursor: pointer;
+                }
             }
         }
         .info-text{
@@ -85,6 +87,7 @@
                 @include stylep();
                 span{
                     @include styleh4();
+                    opacity: 1;
                 }
             }
         }

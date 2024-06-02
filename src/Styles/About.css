@@ -1,1 +1,98 @@
-/*# sourceMappingURL=About.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/Fonts/Montserrat-Regular.ttf");
+}
+.about .about-wrapper {
+  margin: 0 auto;
+  width: 95%;
+  padding: 4rem 0;
+}
+.about .about-wrapper .natural-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about .about-wrapper .natural-product .left-box {
+  width: 48%;
+}
+.about .about-wrapper .natural-product .left-box h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  margin: 2rem 0;
+  font-weight: bold;
+  opacity: 1;
+}
+.about .about-wrapper .natural-product .left-box .boxes {
+  display: grid;
+  gap: 1.5rem;
+}
+.about .about-wrapper .natural-product .left-box .boxes .box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.about .about-wrapper .natural-product .left-box .boxes .box .text p {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+  line-height: 28px;
+}
+.about .about-wrapper .natural-product .right-box {
+  width: 48%;
+}
+.about .about-wrapper .natural-product .right-box .right-img {
+  width: 100%;
+  height: 560px;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+.about .about-wrapper .natural-product .right-box .right-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .about .about-wrapper .natural-product {
+    flex-wrap: wrap;
+  }
+  .about .about-wrapper .natural-product .left-box {
+    width: 100%;
+    order: 2;
+  }
+  .about .about-wrapper .natural-product .right-box {
+    width: 100%;
+    order: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .about-wrapper {
+    padding: 2rem 0;
+  }
+  .about .about-wrapper .natural-product {
+    gap: 1rem;
+  }
+  .about .about-wrapper .natural-product .left-box h2 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .about .about-wrapper .natural-product .left-box .boxes {
+    gap: 1rem;
+  }
+  .about .about-wrapper .natural-product .right-box .right-img {
+    height: 360px;
+  }
+}/*# sourceMappingURL=About.css.map */

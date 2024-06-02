@@ -1,0 +1,89 @@
+@import "./Global.scss";
+.about {
+  .about-wrapper {
+    @include wrapperStyle();
+    padding: 4rem 0;
+    .natural-product {
+      @include flexBeetwen();
+      .left-box {
+        width: 48%;
+        h2{
+            @include styleh2();
+            font-weight: bold;
+            opacity: 1;
+        }
+        .boxes {
+          display: grid;
+          gap: 1.5rem;
+          .box {
+            @include flexStart();
+            .img{
+
+            }
+            .text{
+                p{
+                    @include stylep();
+                    line-height: 28px;
+                }
+            }
+          }
+        }
+      }
+      .right-box {
+        width: 48%;
+        .right-img {
+          width: 100%;
+          height: 560px;
+          border-radius: 1.2rem;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:"992px") {
+    .about{
+        .about-wrapper{
+            .natural-product{
+                flex-wrap: wrap;
+                .left-box{
+                 width: 100%;
+                 order: 2;
+                }
+                .right-box{
+                    width: 100%;
+                    order: 1;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:"768px") {
+    .about{
+        .about-wrapper{
+            padding: 2rem 0;
+            .natural-product{
+                gap: 1rem;
+                .left-box{
+                    h2{
+                        margin: 1rem 0;
+                        text-align: center;
+                    }
+                   .boxes{
+                    gap: 1rem;
+                   }
+                }
+                .right-box{
+                    .right-img{
+                        height: 360px;
+                    }
+                }
+            }
+        }
+    }
+}

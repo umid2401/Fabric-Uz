@@ -29,8 +29,12 @@ export default function Navbar() {
     });
   }, []);
   const showMobileMenu = () => {
-    AOS.refresh();
+   
     setMenuOpen(!menuOpen);
+  };
+  const showMobileMenus = () => {
+    AOS.refresh();
+    
   };
   const hideMenu = () => {
     if(window.innerWidth<768){
