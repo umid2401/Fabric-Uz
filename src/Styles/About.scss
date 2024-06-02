@@ -1,10 +1,10 @@
-@import "./Global.scss";
+@import "../Styles/Global.scss";
 .about {
   .about-wrapper {
-    @include wrapperStyle();
-    padding: 4rem 0;
-    .natural-product {
-      @include flexBeetwen();
+      @include wrapperStyle();
+      padding: 4rem 0;
+      .natural-product {
+        @include flexBeetwen();
       .left-box {
         width: 48%;
         h2{
@@ -17,9 +17,6 @@
           gap: 1.5rem;
           .box {
             @include flexStart();
-            .img{
-
-            }
             .text{
                 p{
                     @include stylep();

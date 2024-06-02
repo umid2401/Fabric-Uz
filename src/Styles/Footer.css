@@ -10,7 +10,13 @@
 }
 .footer .footer-wrapper {
   margin: 0 auto;
+  padding: auto;
   width: 95%;
+}
+@media screen and (min-width: 1300px) {
+  .footer .footer-wrapper {
+    width: 1300px;
+  }
 }
 .footer .footer-wrapper .footer-cards {
   padding: 2rem 0 3rem 0;

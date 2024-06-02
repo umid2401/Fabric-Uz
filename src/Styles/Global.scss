@@ -16,10 +16,19 @@ $bg2Color: "blue";
   font-family: "Montserrat";
   src: url("../../public/Fonts/Montserrat-Regular.ttf");
 }
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../../public/Fonts/Montserrat-Bold.ttf");
+}
 $myFont: "Montserrat";
+$bold:"MontserratBold";
 @mixin wrapperStyle {
   margin: 0 auto;
+  padding: auto;
   width: 95%;
+  @media screen and (min-width:"1300px") {
+    width: 1300px;
+  }
 }
 @mixin flexStart {
   display: flex;

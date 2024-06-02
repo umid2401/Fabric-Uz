@@ -10,8 +10,14 @@
 }
 .about .about-wrapper {
   margin: 0 auto;
+  padding: auto;
   width: 95%;
   padding: 4rem 0;
+}
+@media screen and (min-width: 1300px) {
+  .about .about-wrapper {
+    width: 1300px;
+  }
 }
 .about .about-wrapper .natural-product {
   display: flex;

@@ -7,4 +7,8 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../../public/Fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../../public/Fonts/Montserrat-Bold.ttf");
 }/*# sourceMappingURL=Global.css.map */

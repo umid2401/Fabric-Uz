@@ -14,12 +14,18 @@
 }
 .contact .contact-wrapper {
   margin: 0 auto;
+  padding: auto;
   width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: start;
   padding: 5rem 0;
+}
+@media screen and (min-width: 1300px) {
+  .contact .contact-wrapper {
+    width: 1300px;
+  }
 }
 .contact .contact-wrapper .content-left {
   width: 45%;
@@ -87,12 +93,18 @@
 }
 .contact .info {
   margin: 0 auto;
+  padding: auto;
   width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 2rem;
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 1300px) {
+  .contact .info {
+    width: 1300px;
+  }
 }
 .contact .info .info-card {
   display: flex;

@@ -1,80 +1,48 @@
 import React from "react";
 import "../Styles/Home.scss"
-export default function Home() {
+export default function Home(props) {
+  const {data} = props;
+  console.log(data);
   const elementor_card = [
     {
       id: 1,
-      url: "images/.png",
+      url: "images/group.svg",
       title: "Free shipping",
       description: "Free shipping on all orders",
     },
     {
       id: 2,
-      url: "images/.png",
+      url: "images/guarantee.svg",
       title: "Return Guarantee",
       description: "Free shipping on all orders",
     },
     {
       id: 3,
-      url: "images/.png",
+      url: "images/delivry.svg",
       title: " Online support 24/7",
       description: " Technical support 24/7",
     },
     {
       id: 4,
-      url: "images/.png",
+      url: "images/wallet.svg",
       title: "Secure payment",
       description: "All payment methods accepted",
     },
   ];
-const winter_card  =  [
-    {id:1, url:"Images/.png", name:"Squares"},
-    {id:2, url:"Images/.png", name:"Ikat"},
-    {id:3, url:"Images/.png", name:"Circles"},
-    {id:4, url:"Images/.png", name:"Geometry blue"},
-    {id:5, url:"Images/.png", name:"Tropical leaves"},
-    {id:6, url:"Images/.png", name:"Bambi"},
-    {id:7, url:"Images/.png", name:"Byzantium"},
-    {id:8, url:"Images/.png", name:"Evening garden"},
-    {id:9, url:"Images/.png", name:"Feather Marquis"},
-    {id:10, url:"Images/.png", name:"Lavender roses"},
-];
-const autumn_card  =  [
-    {id:1, url:"Images/.png", name:"Squares"},
-    {id:2, url:"Images/.png", name:"Ikat"},
-    {id:3, url:"Images/.png", name:"Circles"},
-    {id:4, url:"Images/.png", name:"Geometry blue"},
-    {id:5, url:"Images/.png", name:"Tropical leaves"},
-    {id:6, url:"Images/.png", name:"Bambi"},
-    {id:7, url:"Images/.png", name:"Byzantium"},
-    {id:8, url:"Images/.png", name:"Evening garden"},
-    {id:9, url:"Images/.png", name:"Feather Marquis"},
-    {id:10, url:"Images/.png", name:"Lavender roses"},
-];
-const summer_card  =  [
-    {id:1, url:"Images/.png", name:"Squares"},
-    {id:2, url:"Images/.png", name:"Ikat"},
-    {id:3, url:"Images/.png", name:"Circles"},
-    {id:4, url:"Images/.png", name:"Geometry blue"},
-    {id:5, url:"Images/.png", name:"Tropical leaves"},
-    {id:6, url:"Images/.png", name:"Bambi"},
-    {id:7, url:"Images/.png", name:"Byzantium"},
-    {id:8, url:"Images/.png", name:"Evening garden"},
-    {id:9, url:"Images/.png", name:"Feather Marquis"},
-    {id:10, url:"Images/.png", name:"Lavender roses"},
-];
-const news_card = [
 
-]
+const winterData = data.filter(item => item.season === "winter");
+const autumnData = data.filter(item => item.season === "autumn");
+const summerData = data.filter(item => item.season === "summer");
+
   return (
     <div className="home">
       <div className="home-wrapper">
         <div className="home-bg">
           <div className="left-content">
-            <img src="Images/111.pn" alt="There is an error" />
+            <img src="Images/position1.png" alt="There is an error" />
           </div>
           <div className="right-content">
-            <h3></h3>
+            <h3>Mattresses</h3>
             <h2>Natural</h2>
             <h1>Product</h1>
           </div>
@@ -112,10 +80,10 @@ const news_card = [
             <h2>Winter collection</h2>
             <p>Natural Product</p>
             <div className="cards">
-                {winter_card&&winter_card.map((card,index)=>(
+                {winterData&&winterData.map((card,index)=>(
                     <div className="card" key={index}>
                         <div className="img">
-                            <img src={card.url} alt={card.name} />
+                            <img src={card.imgUrl} alt={card.name} />
                         </div>
                         <p>{card.name}</p>
                     </div>
@@ -141,10 +109,10 @@ const news_card = [
             <h2>Autumn collection</h2>
             <p>Natural Product</p>
             <div className="cards">
-                {winter_card&&winter_card.map((card,index)=>(
+                {summerData&&summerData.map((card,index)=>(
                     <div className="card" key={index}>
                         <div className="img">
-                            <img src={card.url} alt={card.name} />
+                            <img src={card.imgUrl} alt={card.name} />
                         </div>
                         <p>{card.name}</p>
                     </div>
@@ -170,10 +138,10 @@ const news_card = [
             <h2>Summer collection</h2>
             <p>Natural Product</p>
             <div className="cards">
-                {winter_card&&winter_card.map((card,index)=>(
+                {autumnData&&autumnData.map((card,index)=>(
                     <div className="card" key={index}>
                         <div className="img">
-                            <img src={card.url} alt={card.name} />
+                            <img src={card.imgUrl} alt={card.name} />
                         </div>
                         <p>{card.name}</p>
                     </div>

@@ -1,4 +1,4 @@
-@import "./Global.scss";
+@import "../Styles/Global.scss";
 
 .navbar {
   .navbar-wrapper {
@@ -191,6 +191,11 @@
             display: none;
           }
         }
+        .navbar-right {
+          .dropdown {
+            display: none;
+          }
+        }
         .show-menu {
           display: block;
         }
@@ -214,11 +219,7 @@
             display: none;
           }
         }
-        .navbar-right {
-          .dropdown {
-            display: none;
-          }
-        }
+        
         .show-menu {
           display: block;
         }

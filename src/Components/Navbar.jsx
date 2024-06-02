@@ -32,10 +32,7 @@ export default function Navbar() {
    
     setMenuOpen(!menuOpen);
   };
-  const showMobileMenus = () => {
-    AOS.refresh();
-    
-  };
+ 
   const hideMenu = () => {
     if(window.innerWidth<768){
       
