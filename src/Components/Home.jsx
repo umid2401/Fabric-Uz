@@ -4,31 +4,32 @@ export default function Home(props) {
   const {data} = props;
   console.log(data);
   const elementor_card = [
-    {
-      id: 1,
-      url: "images/group.png",
-      title: "Free shipping",
-      description: "Free shipping on all orders",
-    },
-    {
-      id: 2,
-      url: "images/guarantee.png",
-      title: "Return Guarantee",
-      description: "Free shipping on all orders",
-    },
-    {
-      id: 3,
-      url: "images/delivry.png",
-      title: " Online support 24/7",
-      description: " Technical support 24/7",
-    },
-    {
-      id: 4,
-      url: "images/wallet.png",
-      title: "Secure payment",
-      description: "All payment methods accepted",
-    },
+    
   ];
+  const card = [{
+    id: 1,
+    url: "images/group.png",
+    title: "Free shipping",
+    description: "Free shipping on all orders",
+  },
+  {
+    id: 2,
+    url: "images/guarantee.png",
+    title: "Return Guarantee",
+    description: "Free shipping on all orders",
+  },
+  {
+    id: 3,
+    url: "images/delivry.png",
+    title: " Online support 24/7",
+    description: " Technical support 24/7",
+  },
+  {
+    id: 4,
+    url: "images/wallet.png",
+    title: "Secure payment",
+    description: "All payment methods accepted",
+  },]
 
 const winterData = data.filter(item => item.season === "winter");
 const autumnData = data.filter(item => item.season === "autumn");
@@ -36,6 +37,7 @@ const summerData = data.filter(item => item.season === "summer");
 
   return (
     <div className="home">
+      <img src="Images/wallet.png" alt="none" />
       <div className="home-wrapper">
         <div className="home-bg">
           <div className="left-content">
@@ -48,8 +50,8 @@ const summerData = data.filter(item => item.season === "summer");
           </div>
         </div>
         <div className="elementor-section">
-          {elementor_card &&
-            elementor_card.map((item, index) => (
+          {card &&
+            card.map((item, index) => (
               <div key={index} className="content">
                 <div className="image">
                   <img src={item.url} alt="er" />
