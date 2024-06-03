@@ -37,7 +37,7 @@ const summerData = data.filter(item => item.season === "summer");
 
   return (
     <div className="home">
-      <img src="Images/wallet.png" alt="none" />
+      
       <div className="home-wrapper">
         <div className="home-bg">
           <div className="left-content">
@@ -54,7 +54,7 @@ const summerData = data.filter(item => item.season === "summer");
             card.map((item, index) => (
               <div key={index} className="content">
                 <div className="image">
-                  <img src={item.url} alt="er" />
+                  <img src={item.url} alt="error" />
                 </div>
                 <div className="text">
                   <h4>{item.title}</h4>
