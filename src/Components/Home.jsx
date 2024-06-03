@@ -6,25 +6,25 @@ export default function Home(props) {
   const elementor_card = [
     {
       id: 1,
-      url: "images/group.svg",
+      url: "images/group.png",
       title: "Free shipping",
       description: "Free shipping on all orders",
     },
     {
       id: 2,
-      url: "images/guarantee.svg",
+      url: "images/guarantee.png",
       title: "Return Guarantee",
       description: "Free shipping on all orders",
     },
     {
       id: 3,
-      url: "images/delivry.svg",
+      url: "images/delivry.png",
       title: " Online support 24/7",
       description: " Technical support 24/7",
     },
     {
       id: 4,
-      url: "images/wallet.svg",
+      url: "images/wallet.png",
       title: "Secure payment",
       description: "All payment methods accepted",
     },
