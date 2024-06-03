@@ -158,6 +158,9 @@
   gap: 1rem;
   width: 22%;
 }
+.home .home-wrapper .elementor-section .content .image img {
+  width: 4rem;
+}
 .home .home-wrapper .elementor-section .content .text h4 {
   font-family: "Montserrat", Sans-serif;
   font-size: clamp(15px, 4vw, 17px);

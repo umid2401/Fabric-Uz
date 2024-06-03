@@ -112,6 +112,12 @@
         @include flexStart();
         gap: 1rem;
         width: 22%;
+        .image{
+            img{
+                width: 4rem;
+                
+            }
+        }
         .text {
           h4 {
             @include styleh4();
