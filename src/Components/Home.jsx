@@ -52,7 +52,7 @@ const summerData = data.filter(item => item.season === "summer");
             elementor_card.map((item, index) => (
               <div key={index} className="content">
                 <div className="image">
-                  <img src={item.url} alt={item.description} />
+                  <img src={item.url} alt="error" />
                 </div>
                 <div className="text">
                   <h4>{item.title}</h4>
