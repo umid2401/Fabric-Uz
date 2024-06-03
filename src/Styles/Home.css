@@ -22,7 +22,9 @@
     width: 1300px;
   }
 }
-.home .home-wrapper .winter-collection h2, .home .home-wrapper .autumn-collection h2, .home .home-wrapper .summer-collection h2 {
+.home .home-wrapper .winter-collection h2,
+.home .home-wrapper .autumn-collection h2,
+.home .home-wrapper .summer-collection h2 {
   font-family: "Montserrat", Sans-serif;
   font-size: clamp(28px, 4vw, 36px);
   font-weight: bold;
@@ -31,7 +33,9 @@
   margin: 2rem 0;
   text-align: center;
 }
-.home .home-wrapper .winter-collection .cards, .home .home-wrapper .autumn-collection .cards, .home .home-wrapper .summer-collection .cards {
+.home .home-wrapper .winter-collection .cards,
+.home .home-wrapper .autumn-collection .cards,
+.home .home-wrapper .summer-collection .cards {
   width: 100%;
   display: flex;
   align-items: center;
@@ -41,23 +45,31 @@
        column-gap: 2%;
   row-gap: 20px;
 }
-.home .home-wrapper .winter-collection .cards .card, .home .home-wrapper .autumn-collection .cards .card, .home .home-wrapper .summer-collection .cards .card {
+.home .home-wrapper .winter-collection .cards .card,
+.home .home-wrapper .autumn-collection .cards .card,
+.home .home-wrapper .summer-collection .cards .card {
   cursor: pointer;
   width: 18%;
 }
-.home .home-wrapper .winter-collection .cards .card .img, .home .home-wrapper .autumn-collection .cards .card .img, .home .home-wrapper .summer-collection .cards .card .img {
+.home .home-wrapper .winter-collection .cards .card .img,
+.home .home-wrapper .autumn-collection .cards .card .img,
+.home .home-wrapper .summer-collection .cards .card .img {
   height: 160px;
   width: 100%;
   border-radius: 1.2rem;
   overflow: hidden;
 }
-.home .home-wrapper .winter-collection .cards .card .img img, .home .home-wrapper .autumn-collection .cards .card .img img, .home .home-wrapper .summer-collection .cards .card .img img {
+.home .home-wrapper .winter-collection .cards .card .img img,
+.home .home-wrapper .autumn-collection .cards .card .img img,
+.home .home-wrapper .summer-collection .cards .card .img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
 }
-.home .home-wrapper .winter-collection .cards .card p, .home .home-wrapper .autumn-collection .cards .card p, .home .home-wrapper .summer-collection .cards .card p {
+.home .home-wrapper .winter-collection .cards .card p,
+.home .home-wrapper .autumn-collection .cards .card p,
+.home .home-wrapper .summer-collection .cards .card p {
   font-family: "Montserrat", Sans-serif;
   font-size: clamp(15px, 4vw, 16px);
   font-weight: normal;
@@ -70,7 +82,9 @@
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.home .home-wrapper .winter-collection .cards .card p:hover, .home .home-wrapper .autumn-collection .cards .card p:hover, .home .home-wrapper .summer-collection .cards .card p:hover {
+.home .home-wrapper .winter-collection .cards .card p:hover,
+.home .home-wrapper .autumn-collection .cards .card p:hover,
+.home .home-wrapper .summer-collection .cards .card p:hover {
   color: red;
 }
 .home .home-wrapper .home-bg {
@@ -82,25 +96,25 @@
   background: rgb(70, 67, 60);
   border-radius: 1.8rem;
   height: 640px;
+  overflow: hidden;
 }
 .home .home-wrapper .home-bg .left-content {
   width: 100%;
   overflow: hidden;
-  z-index: 5;
-  position: relative;
+  z-index: 4;
 }
 .home .home-wrapper .home-bg .left-content img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(-16%, 3%);
+  transform: translate(-16%, 5%);
   height: 100%;
 }
 .home .home-wrapper .home-bg .right-content {
   position: absolute;
   right: 0;
   top: 15%;
-  z-index: 4;
+  z-index: 0;
   overflow: hidden;
 }
 .home .home-wrapper .home-bg .right-content h1 {
@@ -131,14 +145,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding: 2rem 0;
 }
 .home .home-wrapper .elementor-section .content {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+  width: 22%;
 }
 .home .home-wrapper .elementor-section .content .text h4 {
   font-family: "Montserrat", Sans-serif;
@@ -161,13 +179,175 @@
   opacity: 0.4;
   font-size: 14px;
 }
+.home .home-wrapper .media-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.8rem;
+  margin: 12rem 0;
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+.home .home-wrapper .media-section img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-60%, -35%);
+  width: 65%;
+  top: 0;
+}
+.home .home-wrapper .media-section .text-left-card {
+  width: 25%;
+  position: static;
+  z-index: 6;
+  text-align: right;
+}
+.home .home-wrapper .media-section .text-left-card h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  margin: 2rem 0;
+  font-family: "MontserratBold";
+  color: #fff;
+  font-size: clamp(40px, 8vw, 65px);
+}
+.home .home-wrapper .media-section .text-left-card p {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+  text-transform: initial;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 35px);
+  line-height: 50px;
+}
+.home .home-wrapper .media-section .text-right-card {
+  width: 38%;
+  position: static;
+  z-index: 6;
+}
+.home .home-wrapper .media-section .text-right-card h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  margin: 2rem 0;
+  font-family: "MontserratBold";
+  color: #fff;
+  margin: 1.5rem 0;
+  font-size: clamp(32px, 4vw, 45px);
+}
+.home .home-wrapper .media-section .text-right-card p {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+  line-height: 30px;
+  color: #fff;
+  margin: 1.5rem 0;
+  width: 85%;
+}
+.home .home-wrapper .media-section .text-right-card button {
+  border: none;
+  font-family: "Montserrat";
+  font-size: clamp(14px, 4vw, 15px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.8rem;
+  background: rgb(243, 37, 37);
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-family: "MontserratBold";
+  color: #fff;
+  background: white;
+  color: rgb(54, 95, 93);
+}
+.home .home-wrapper .media-section .text-right-card button:hover {
+  background: black;
+}
+.home .home-wrapper .media-section1 {
+  background: rgb(48, 126, 122);
+}
+.home .home-wrapper .media-section2 {
+  background: rgb(135, 123, 170);
+}
+.home .home-wrapper .media-section3 {
+  background: rgb(58, 90, 76);
+}
 
+@media screen and (max-width: 992px) {
+  .home .home-wrapper .elementor-section {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .home .home-wrapper .elementor-section .content {
+    width: 45%;
+  }
+  .home .home-wrapper .winter-collection .cards,
+  .home .home-wrapper .autumn-collection .cards,
+  .home .home-wrapper .summer-collection .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .home .home-wrapper .winter-collection .cards .card,
+  .home .home-wrapper .autumn-collection .cards .card,
+  .home .home-wrapper .summer-collection .cards .card {
+    cursor: pointer;
+    width: 22%;
+  }
+  .home .home-wrapper .media-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1.8rem;
+    margin: 6rem 0;
+    position: relative;
+    width: 100%;
+    height: 260px;
+  }
+  .home .home-wrapper .media-section img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-60%, -25%);
+    width: 65%;
+    top: 0;
+  }
+  .home .home-wrapper .media-section .text-left-card {
+    text-align: left;
+    margin-left: 2rem;
+  }
+  .home .home-wrapper .media-section .text-right-card {
+    width: 38%;
+  }
+  .home .home-wrapper .media-section .text-right-card h2,
+  .home .home-wrapper .media-section .text-right-card p,
+  .home .home-wrapper .media-section .text-right-card button {
+    margin: 1rem 0;
+  }
+  .home .home-wrapper .media-section .text-right-card p {
+    width: 95%;
+  }
+  .home .home-wrapper .media-section .text-right-card button {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .home .home-wrapper .home-bg {
     height: 400px;
   }
   .home .home-wrapper .home-bg .right-content {
-    top: 30%;
+    top: 20%;
   }
   .home .home-wrapper .home-bg .right-content h1 {
     font-size: 80px;
@@ -179,10 +359,85 @@
   .home .home-wrapper .home-bg .right-content h3 {
     font-size: 30;
   }
-}
-@media screen and (max-width: 488px) {
-  .home .home-wrapper .home-bg {
+  .home .home-wrapper .winter-collection .cards,
+  .home .home-wrapper .autumn-collection .cards,
+  .home .home-wrapper .summer-collection .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .home .home-wrapper .winter-collection .cards .card,
+  .home .home-wrapper .autumn-collection .cards .card,
+  .home .home-wrapper .summer-collection .cards .card {
+    cursor: pointer;
+    width: 30%;
+  }
+  .home .home-wrapper .media-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: end;
+    border-radius: 1.8rem;
+    margin: 5rem 0;
+    position: relative;
+    width: 100%;
+    height: 480px;
+    padding-bottom: 1rem;
+    gap: 0rem;
+  }
+  .home .home-wrapper .media-section img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -35%);
+    width: 100%;
+    top: 0;
     height: 240px;
+  }
+  .home .home-wrapper .media-section .text-left-card {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .home .home-wrapper .media-section .text-left-card h2, .home .home-wrapper .media-section .text-left-card p {
+    margin: 0.9rem 0;
+  }
+  .home .home-wrapper .media-section .text-right-card {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .home .home-wrapper .media-section .text-right-card h2,
+  .home .home-wrapper .media-section .text-right-card p,
+  .home .home-wrapper .media-section .text-right-card button {
+    margin: 0.9rem 0;
+  }
+  .home .home-wrapper .media-section .text-right-card h2 {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 592px) {
+  .home .home-wrapper .winter-collection .cards,
+  .home .home-wrapper .autumn-collection .cards,
+  .home .home-wrapper .summer-collection .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home .home-wrapper .winter-collection .cards .card,
+  .home .home-wrapper .autumn-collection .cards .card,
+  .home .home-wrapper .summer-collection .cards .card {
+    cursor: pointer;
+    width: 48%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home .home-wrapper .home-bg {
+    height: 220px;
   }
   .home .home-wrapper .home-bg .left-content img {
     height: 220px;
@@ -199,5 +454,35 @@
   }
   .home .home-wrapper .home-bg .right-content h3 {
     font-size: 16px;
+  }
+  .home .home-wrapper .elementor-section .content {
+    width: 100%;
+    margin: 0 auto;
+    gap: 0.6rem;
+  }
+  .home .home-wrapper .elementor-section .content .image img {
+    width: 2.6rem;
+  }
+  .home .home-wrapper .winter-collection .cards,
+  .home .home-wrapper .autumn-collection .cards,
+  .home .home-wrapper .summer-collection .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+  }
+  .home .home-wrapper .winter-collection .cards .card,
+  .home .home-wrapper .autumn-collection .cards .card,
+  .home .home-wrapper .summer-collection .cards .card {
+    cursor: pointer;
+    width: 48%;
+    max-width: 400px;
+  }
+  .home .home-wrapper .winter-collection .cards .card .img,
+  .home .home-wrapper .autumn-collection .cards .card .img,
+  .home .home-wrapper .summer-collection .cards .card .img {
+    border-radius: 0;
+    height: 120px;
   }
 }/*# sourceMappingURL=Home.css.map */

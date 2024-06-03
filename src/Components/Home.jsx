@@ -61,12 +61,12 @@ const summerData = data.filter(item => item.season === "summer");
               </div>
             ))}
         </div>
-        <div className="media-section">
-            <img src="Images//png" alt="" />
+        <div className="media-section media-section1">
           <div className="text-left-card">
             <h2>100%</h2>
             <p>Material quality</p>
           </div>
+          <img src="Images/position2.png" alt="" />
           <div className="text-right-card">
             <h2>Natural Product</h2>
             <p>
@@ -90,12 +90,12 @@ const summerData = data.filter(item => item.season === "summer");
                 ))}
             </div>
         </div>
-        <div className="media-section">
-            <img src="Images//png" alt="" />
+        <div className="media-section media-section2">
           <div className="text-left-card">
             <h2>100%</h2>
             <p>Material quality</p>
           </div>
+          <img src="Images/position3.png" alt="" />
           <div className="text-right-card">
             <h2>Natural Product</h2>
             <p>
@@ -119,12 +119,12 @@ const summerData = data.filter(item => item.season === "summer");
                 ))}
             </div>
         </div>
-        <div className="media-section">
-            <img src="Images//png" alt="" />
+        <div className="media-section media-section3">
           <div className="text-left-card">
             <h2>100%</h2>
             <p>Material quality</p>
           </div>
+          <img src="Images/position4.png" alt="" />
           <div className="text-right-card">
             <h2>Natural Product</h2>
             <p>
