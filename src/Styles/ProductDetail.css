@@ -83,6 +83,107 @@
   opacity: 0.8;
   margin: 2rem 0;
 }
+.product-detail .product-wrapper .tabs {
+  margin: 2rem 0;
+}
+.product-detail .product-wrapper .tabs .tab-header .tabPane, .product-detail .product-wrapper .tabs .tab-header .review {
+  width: 70%;
+  margin: 0rem auto;
+}
+.product-detail .product-wrapper .tabs .tab-header .tabPane h2, .product-detail .product-wrapper .tabs .tab-header .review h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  margin: 2rem 0;
+  font-size: clamp(18px, 4vw, 24px);
+  font-family: "MontserratBold";
+  opacity: 0.8;
+  margin: 2rem auto;
+}
+.product-detail .product-wrapper .tabs .tab-header .tabPane h3, .product-detail .product-wrapper .tabs .tab-header .review h3 {
+  font-size: clamp(16px, 4vw, 22px);
+  margin: 2rem 0;
+  font-family: "MontserratBold";
+  opacity: 0.6;
+}
+.product-detail .product-wrapper .tabs .tab-header .tabPane p, .product-detail .product-wrapper .tabs .tab-header .review p {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(15px, 4vw, 16px);
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 19px;
+  opacity: 0.8;
+  width: 90%;
+  line-height: 30px;
+  margin: 2rem 0;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left {
+  width: 80%;
+  margin: 0 auto;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left h2 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 19px;
+  margin: 2rem 0;
+  margin-bottom: 3rem;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form .input input,
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form .number input {
+  overflow: hidden;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 2rem;
+  padding: 1.2rem 2rem;
+  font-family: "Montserrat";
+  font-size: clamp(15px, 4vw, 17px);
+  width: 100%;
+  outline: none;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form .input,
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form .number,
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form .textarea,
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form button {
+  margin: 2rem 0;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form .textarea textarea {
+  width: 100%;
+  height: 280px;
+  border: none;
+  background: #f5f5f5;
+  font-family: "Montserrat";
+  font-size: clamp(15px, 4vw, 17px);
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 1.8rem;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form button {
+  border: none;
+  font-family: "Montserrat";
+  font-size: clamp(14px, 4vw, 15px);
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.8rem;
+  background: rgb(243, 37, 37);
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  padding: 1.2rem 2rem;
+  width: 200px;
+  float: right;
+  margin: 0;
+}
+.product-detail .product-wrapper .tabs .tab-header .review .content-left form button:hover {
+  background: black;
+}
+.product-detail .product-wrapper .tabs .ant-tabs-tab-btn {
+  font-size: clamp(15px, 4vw, 17px);
+  color: rgb(110, 94, 74);
+  font-family: "MontserratBold";
+}
 
 @media screen and (max-width: 992px) {
   .product-detail .product-wrapper .top-product {
@@ -114,5 +215,38 @@
   }
   .product-detail .product-wrapper .top-product .product-description .responsive-table {
     width: 100%;
+  }
+  .product-detail .product-wrapper .tabs {
+    margin: 1rem 0;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .tabPane, .product-detail .product-wrapper .tabs .tab-header .review {
+    width: 95%;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .tabPane p, .product-detail .product-wrapper .tabs .tab-header .review p {
+    width: 100%;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .tabPane h2, .product-detail .product-wrapper .tabs .tab-header .tabPane h3, .product-detail .product-wrapper .tabs .tab-header .tabPane p, .product-detail .product-wrapper .tabs .tab-header .review h2, .product-detail .product-wrapper .tabs .tab-header .review h3, .product-detail .product-wrapper .tabs .tab-header .review p {
+    margin: 1rem 0;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .review .content-left {
+    width: 100%;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .review .content-left h2 {
+    margin-bottom: 2rem;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .review .content-left form .input input,
+  .product-detail .product-wrapper .tabs .tab-header .review .content-left form .number input {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .review .content-left form .textarea textarea {
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+  .product-detail .product-wrapper .tabs .tab-header .review .content-left form button {
+    padding: 0.6rem 1.5rem;
+    width: 180px;
+    float: left;
+    text-align: center;
   }
 }/*# sourceMappingURL=ProductDetail.css.map */
