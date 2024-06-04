@@ -8,6 +8,10 @@
   font-family: "Montserrat";
   src: url("../../public/Fonts/Montserrat-Regular.ttf");
 }
+@font-face {
+  font-family: "MontserratBold";
+  src: url("../../public/Fonts/Montserrat-Bold.ttf");
+}
 .footer .footer-wrapper {
   margin: 0 auto;
   padding: auto;
@@ -150,7 +154,10 @@
     flex-wrap: wrap;
     row-gap: 2rem;
   }
-  .footer .footer-wrapper .footer-cards .card1, .footer .footer-wrapper .footer-cards .card2, .footer .footer-wrapper .footer-cards .card3, .footer .footer-wrapper .footer-cards .card4 {
+  .footer .footer-wrapper .footer-cards .card1,
+  .footer .footer-wrapper .footer-cards .card2,
+  .footer .footer-wrapper .footer-cards .card3,
+  .footer .footer-wrapper .footer-cards .card4 {
     width: 48%;
   }
 }
@@ -163,10 +170,14 @@
   .footer .footer-wrapper .footer-cards .card1 .logo-text p {
     margin-top: 0.5rem;
   }
-  .footer .footer-wrapper .footer-cards .card1, .footer .footer-wrapper .footer-cards .card2, .footer .footer-wrapper .footer-cards .card3 {
+  .footer .footer-wrapper .footer-cards .card1,
+  .footer .footer-wrapper .footer-cards .card2,
+  .footer .footer-wrapper .footer-cards .card3 {
     width: 100%;
   }
-  .footer .footer-wrapper .footer-cards .card1 h4, .footer .footer-wrapper .footer-cards .card2 h4, .footer .footer-wrapper .footer-cards .card3 h4 {
+  .footer .footer-wrapper .footer-cards .card1 h4,
+  .footer .footer-wrapper .footer-cards .card2 h4,
+  .footer .footer-wrapper .footer-cards .card3 h4 {
     margin-bottom: 0.5rem;
   }
   .footer .footer-wrapper .footer-cards .card4 {

@@ -1,11 +1,10 @@
 import React from "react";
 import "../Styles/Home.scss"
-export default function Home(props) {
-  const {data} = props;
-  console.log(data);
-  const elementor_card = [
-    
-  ];
+import { useNavigate } from "react-router-dom";
+import {data} from "../data";
+export default function Home() {
+  const navigate = useNavigate();
+ 
   const card = [{
     id: 1,
     url: "Images/group.png",
@@ -30,11 +29,12 @@ export default function Home(props) {
     title: "Secure payment",
     description: "All payment methods accepted",
   },]
-
 const winterData = data.filter(item => item.season === "winter");
 const autumnData = data.filter(item => item.season === "autumn");
 const summerData = data.filter(item => item.season === "summer");
-
+const navigationFun = (item) =>{
+  navigate(`/${item}`)
+}
   return (
     <div className="home">
       
@@ -52,7 +52,7 @@ const summerData = data.filter(item => item.season === "summer");
         <div className="elementor-section">
           {card &&
             card.map((item, index) => (
-              <div key={index} className="content">
+              <div key={index} className="content" >
                 <div className="image">
                   <img src={item.url} alt="error" />
                 </div>
@@ -83,7 +83,7 @@ const summerData = data.filter(item => item.season === "summer");
             <p>Natural Product</p>
             <div className="cards">
                 {winterData&&winterData.map((card,index)=>(
-                    <div className="card" key={index}>
+                    <div className="card" key={index} onClick={()=>navigationFun(card.name)}>
                         <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>
@@ -112,7 +112,7 @@ const summerData = data.filter(item => item.season === "summer");
             <p>Natural Product</p>
             <div className="cards">
                 {summerData&&summerData.map((card,index)=>(
-                    <div className="card" key={index}>
+                    <div onClick={()=>navigationFun(card.name)} className="card" key={index}>
                         <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>
@@ -141,7 +141,7 @@ const summerData = data.filter(item => item.season === "summer");
             <p>Natural Product</p>
             <div className="cards">
                 {autumnData&&autumnData.map((card,index)=>(
-                    <div className="card" key={index}>
+                    <div onClick={()=>navigationFun(card.name)} className="card" key={index}>
                         <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>

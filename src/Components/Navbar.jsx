@@ -7,7 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activindex, setActiveindex] = useState(0);
+  const [activeindex, setActiveindex] = useState(0);
   const [showLangs, setShowLangs] = useState(false);
   const routes = [
     { id: 1, route: "/", name: "Home" },
@@ -15,12 +15,18 @@ export default function Navbar() {
     { id: 1, route: "/about", name: "About" },
     { id: 1, route: "/contact", name: "Contact" },
   ];
+
+  useEffect(() => {
+    const x = localStorage.getItem("index");
+    setActiveindex(+x);
+  }, []);
   const activeLink = (id) => {
     setActiveindex(id);
+    localStorage.setItem("index", id);
   };
   const showLang = () => {
-    if(window.innerWidth>768){
-        setShowLangs(!showLangs);
+    if (window.innerWidth > 768) {
+      setShowLangs(!showLangs);
     }
   };
   useEffect(() => {
@@ -29,20 +35,18 @@ export default function Navbar() {
     });
   }, []);
   const showMobileMenu = () => {
-   
     setMenuOpen(!menuOpen);
   };
- 
+
   const hideMenu = () => {
-    if(window.innerWidth<768){
-      
-        setMenuOpen(!menuOpen);
+    if (window.innerWidth < 768) {
+      setMenuOpen(!menuOpen);
     }
   };
-  const changLanguage = () =>{
+  const changLanguage = () => {
     hideMenu();
     showLang();
-  }
+  };
   return (
     <div className="navbar">
       <div className="navbar-wrapper">
@@ -58,10 +62,13 @@ export default function Navbar() {
                   <li key={index}>
                     <Link
                       onClick={() => activeLink(index)}
-                      className={`link ${activindex === index ? "active" : ""}`}
+                      className={`link ${
+                        activeindex === index ? "active" : ""
+                      }`}
                       to={route.route}
                     >
                       {route.name}
+            
                     </Link>
                   </li>
                 ))}
@@ -90,9 +97,9 @@ export default function Navbar() {
                 </li>
                 <li onClick={changLanguage} className="language-item">
                   {" "}
-                  <img src="Images/united-kingdom (2).png" alt="" /> <span>RU</span>
+                  <img src="Images/united-kingdom (2).png" alt="" />{" "}
+                  <span>RU</span>
                 </li>
-              
               </ul>
             </div>
           </div>
@@ -100,7 +107,10 @@ export default function Navbar() {
             <img src="Images/menu3.png" alt="" />
           </div>
           {menuOpen && (
-            <div className="menu-dropdown" data-aos={`${menuOpen?"zoom-in":"zoom-out"}`}>
+            <div
+              className="menu-dropdown"
+              data-aos={`${menuOpen ? "zoom-in" : "zoom-out"}`}
+            >
               <div onClick={showMobileMenu} className="hide-menu">
                 <img src="Images/close.png" alt="Error" />
               </div>
@@ -108,7 +118,11 @@ export default function Navbar() {
                 {routes &&
                   routes.map((route, index) => (
                     <li key={index}>
-                      <Link onClick={hideMenu} className="link" to={route.route}>
+                      <Link
+                        onClick={hideMenu}
+                        className="link"
+                        to={route.route}
+                      >
                         {route.name}
                       </Link>
                     </li>
@@ -116,10 +130,15 @@ export default function Navbar() {
               </ul>
               <ul className="lang">
                 <li onClick={changLanguage}>
-                <img src="Images/uzbekistan.png" alt="" /> <span>Uz</span>
-                    </li>
-                <li onClick={changLanguage}><img src="Images/russia (2).png" alt="" /> <span>EN</span></li>
-                <li onClick={changLanguage}><img src="Images/united-kingdom (2).png" alt="" /> <span>RU</span></li>
+                  <img src="Images/uzbekistan.png" alt="" /> <span>Uz</span>
+                </li>
+                <li onClick={changLanguage}>
+                  <img src="Images/russia (2).png" alt="" /> <span>EN</span>
+                </li>
+                <li onClick={changLanguage}>
+                  <img src="Images/united-kingdom (2).png" alt="" />{" "}
+                  <span>RU</span>
+                </li>
               </ul>
             </div>
           )}
