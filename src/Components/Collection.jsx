@@ -5,11 +5,13 @@ import {data} from "../data";
 import "..//Styles/Collection.scss";
 export default function Collection() {
   const [active, setActive] = useState(false);
+  const [active1, setActive1] = useState(false);
   const [products, setProducts] = useState(data);
   const product=data;
   const showButton = () => {
     setActive(!active);
   };
+  
   const dataFilerSeason = (season) =>{
     const filterData = product.filter(item=>item.season===season);
     setProducts(filterData);
@@ -52,6 +54,21 @@ export default function Collection() {
           </div>
         </div>
         <div className="right-box">
+          <div className="collection-filter-container">
+           <div className="left-content">
+            <h1>Collection</h1>
+            <p>Showing 1-16 of 76</p>
+           </div>
+           <div className="right-content">
+            <button onClick={()=>setActive1(!active1)}>Initial Sort</button>
+            <div className={`select ${active1?"active":""}`}>
+              <span>Initial sort</span>
+              <span>Price: ascending</span>
+              <span>Price: descending</span>
+              <span>By popularity</span>
+            </div>
+           </div>
+          </div>
           <div className="cards">
               {products?(
                 products.map((card,index)=>(
