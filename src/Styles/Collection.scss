@@ -138,3 +138,68 @@
     }
   }
 }
+@media screen and (max-width:"992px") {
+  .collection{
+    .collection-wrapper{
+      .left-box{
+
+      }
+      .right-box{
+        .cards {
+          width: 100%;
+          @include flexStart();
+          .card {
+            cursor: pointer;
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:"768px") {
+  .collection{
+    .collection-wrapper{
+      flex-wrap: wrap;
+      .left-box{
+        width: 100%;
+      }
+      .right-box{
+        width: 100%;
+        .cards {
+          width: 100%;
+          @include flexBeetwen();
+          .card {
+            cursor: pointer;
+            width: 48%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:"480px") {
+  .collection{
+    .collection-wrapper{
+      .left-box{
+        width: 100%;
+      }
+      .right-box{
+        .cards {
+          width: 100%;
+          @include flexBeetwen();
+          gap: 0.7rem;
+          .card {
+            .img {
+              border-radius: 0;
+              height: 120px;
+            }
+            cursor: pointer;
+            width: 48%;
+            max-width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
