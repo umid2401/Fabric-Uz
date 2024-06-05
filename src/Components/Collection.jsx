@@ -19,6 +19,9 @@ export default function Collection() {
     console.log(filterData);
     console.log(product)
   }
+  const dataSort = (sort) =>{
+    setActive1(!active1);
+  }
   // useEffect(()=>{
   //   dataFilerSeason();
   // },[])
@@ -62,10 +65,10 @@ export default function Collection() {
            <div className="right-content">
             <button onClick={()=>setActive1(!active1)}>Initial Sort</button>
             <div className={`select ${active1?"active":""}`}>
-              <span>Initial sort</span>
-              <span>Price: ascending</span>
-              <span>Price: descending</span>
-              <span>By popularity</span>
+              <span onClick={dataSort}>Initial sort</span>
+              <span onClick={dataSort}>Price: ascending</span>
+              <span onClick={dataSort}>Price: descending</span>
+              <span onClick={dataSort}>By popularity</span>
             </div>
            </div>
           </div>
