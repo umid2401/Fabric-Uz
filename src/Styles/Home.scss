@@ -158,6 +158,7 @@
           font-family: $bold;
           color: #fff;
           font-size: clamp(40px, 8vw, 65px);
+
         }
         p {
           @include stylep();
@@ -175,8 +176,9 @@
           @include styleh2();
           font-family: $bold;
           color: #fff;
-          margin: 1.5rem 0;
+          margin: 1rem 0;
           font-size: clamp(32px, 4vw, 45px);
+          line-height: 40px;
         }
         p {
           @include stylep();
@@ -259,6 +261,7 @@
           button {
             margin: 0;
           }
+         
         }
       }
     }

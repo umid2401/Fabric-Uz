@@ -4,7 +4,9 @@ import "../Styles/ProductDetail.scss";
 import { data } from "../data";
 import { Tabs } from "antd";
 import TabPane from "antd/es/tabs/TabPane";
+import { useTranslation } from "react-i18next";
 export default function ProductDetail() {
+  const {t}=useTranslation();
   const { id } = useParams();
   const product = data.filter((item) => item.name === id);
   const [name] = product;
@@ -69,7 +71,7 @@ export default function ProductDetail() {
                   </tr>
                 </tbody>
               </table>
-              <p>Category:{name.season}</p>
+              <p>{t("category")}:{name.season}</p>
             </div>
           </div>
           <div className="tabs">
@@ -80,14 +82,10 @@ export default function ProductDetail() {
               onChange={onChange}
             >
               <TabPane className="tabPane" tab="Description" key="1">
-                <h3>Description</h3>
+                <h3>{t("description")}</h3>
                 <h2>{name.name}</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ratione sed at nesciunt dolorem cumque rerum magnam commodi.
-                  Quasi quo sapiente, inventore deleniti rem quos ea qui
-                  repudiandae voluptas. Ratione at est inventore voluptate natus
-                  nobis.
+                  {t("m-des")}
                 </p>
               </TabPane>
               <TabPane className="review" tab="Reviews" key="2">

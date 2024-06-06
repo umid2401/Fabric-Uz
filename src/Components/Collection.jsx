@@ -5,6 +5,7 @@ import { Pagination } from 'antd';
 import {data} from "../data";
 import "..//Styles/Collection.scss";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function Collection() {
   const [active, setActive] = useState(false);
   const [active1, setActive1] = useState(false);
@@ -40,6 +41,7 @@ export default function Collection() {
   const navigationFun = (item) =>{
     navigate(`/${item}`)
   }
+  const {t}=useTranslation();
   return (
     <div className="collection">
       <div className="collection-wrapper">
@@ -47,7 +49,7 @@ export default function Collection() {
           <div className="btn-dropdown">
             <div className="input">
               <div className="input-group">
-                <input type="text" placeholder="Search here" />
+                <input type="text" placeholder={t("serach")}  />
                 <div className="search">
                   <img src="Images/icons8-search-24.png" alt="" />
                 </div>
@@ -55,7 +57,7 @@ export default function Collection() {
             </div>
             <div className="button">
               <button onClick={showButton}>
-                <span>Collection</span>
+                <span>{t("collection")}</span>
                 <FontAwesomeIcon
                   className={`icon ${active ? "active" : ""}`}
                   icon={faCaretRight}
@@ -64,26 +66,26 @@ export default function Collection() {
               </button>
             </div>
             <div className={`collection ${active ? "active" : ""}`}>
-              <span onClick={()=>dataFilerSeason("spring")} >Spring collection</span>
-              <span onClick={()=>dataFilerSeason("summer")} >Summer collection</span>
-              <span onClick={()=>dataFilerSeason("winter")} >Winter collection</span>
-              <span onClick={()=>dataFilerSeason("autumn")} >Autumn collection</span>
+              <span onClick={()=>dataFilerSeason("spring")} >{t("s-col")} </span>
+              <span onClick={()=>dataFilerSeason("summer")} >{t("su-col")} </span>
+              <span onClick={()=>dataFilerSeason("winter")} >{t("w-col")} </span>
+              <span onClick={()=>dataFilerSeason("autumn")} >{t("a-col")} </span>
             </div>
           </div>
         </div>
         <div className="right-box">
           <div className="collection-filter-container">
            <div className="left-content">
-            <h1>Collection</h1>
-            <p>Showing 1-16 of 76</p>
+            <h1>{t("collection")} </h1>
+            <p>{t("show")}  1-16 of 76</p>
            </div>
            <div className="right-content">
-            <button onClick={()=>setActive1(!active1)}>Initial Sort</button>
+            <button onClick={()=>setActive1(!active1)}>{t("initial")} </button>
             <div className={`select ${active1?"active":""}`}>
-              <span onClick={()=>dataSort("initialSort")}>Initial sort</span>
-              <span onClick={()=>dataSort("sortAscending")}>Price: ascending</span>
-              <span onClick={()=>dataSort("sortDescending")}>Price: descending</span>
-              <span onClick={()=>dataSort("popularSort")}>By popularity</span>
+              <span onClick={()=>dataSort("initialSort")}>{t("initial")}</span>
+              <span onClick={()=>dataSort("sortAscending")}>{t("ascending")}</span>
+              <span onClick={()=>dataSort("sortDescending")}>{t("descending")}</span>
+              <span onClick={()=>dataSort("popularSort")}>{t("popular")}</span>
             </div>
            </div>
           </div>

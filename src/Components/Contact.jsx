@@ -5,11 +5,12 @@ import { Icon } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 export default function Contact() {
   const position = [41.2936, 69.2401];
   const position2 = [37, 65];
 
-  
+  const {t}=useTranslation();
   const customIcon = new Icon({
     iconUrl: "Images/place.png",
     iconSize: [40, 40],
@@ -19,22 +20,22 @@ export default function Contact() {
     <div className="contact">
       <div className="contact-wrapper">
         <div className="content-left">
-          <h2>Contact</h2>
+          <h2>{t("contact")}</h2>
           <form action="">
             <div className="input">
-              <input type="email" placeholder="Enter Your Email" />
+              <input type="email" placeholder={t("e-email")} />
             </div>
             <div className="number">
-              <input type="number" placeholder="Phone number" />
+              <input type="number" placeholder={t("p-number")}  />
             </div>
             <div className="textarea">
               <textarea
                 name=""
                 id=""
-                placeholder="Your message here"
+                placeholder={t("y-message")} 
               ></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">{t("submit")} </button>
           </form>
         </div>
         <div className="content-right">
@@ -59,7 +60,7 @@ export default function Contact() {
           <FontAwesomeIcon className="icon" icon={faEnvelope} style={{color: "#e7311d"}} />
           </div>
           <div className="info-text">
-            <p><span>Email:</span> mattresses@info.uz</p>
+            <p><span>{t("email")} :</span> mattresses@info.uz</p>
           </div>
         </div>
         <div className="info-card">
@@ -67,7 +68,7 @@ export default function Contact() {
           <FontAwesomeIcon className="icon" icon={faPhone} style={{color: "#e7311d"}} />
           </div>
           <div className="info-text">
-            <p><span>Phone:</span> +9989456537865</p>
+            <p><span>{t("phone")} :</span> +9989456537865</p>
           </div>
         </div>
         <div className="info-card">
@@ -75,7 +76,7 @@ export default function Contact() {
           <FontAwesomeIcon className="icon" icon={faLocationDot} style={{color: "#e7311d"}} />
           </div>
           <div className="info-text">
-            <p><span>Address:</span> Denov, st A.Navoiy 96.</p>
+            <p><span>{t("adress")} :</span> Denov, st A.Navoiy 96.</p>
           </div>
         </div>
       </div>

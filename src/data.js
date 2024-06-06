@@ -1,3 +1,5 @@
+  
+  
  export  const  data = [
     {
       "imgUrl": "Images/diz-69-1-768x768.jpg",

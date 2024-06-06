@@ -2,32 +2,34 @@ import React from "react";
 import "../Styles/Home.scss"
 import { useNavigate } from "react-router-dom";
 import {data} from "../data";
+import { useTranslation } from "react-i18next";
+
 export default function Home() {
   const navigate = useNavigate();
- 
+  const {t}=useTranslation();
   const card = [{
     id: 1,
     url: "Images/group.png",
-    title: "Free shipping",
-    description: "Free shipping on all orders",
+    title: t("ship"),
+    description: t("ship1"),
   },
   {
     id: 2,
     url: "Images/guarantee.png",
-    title: "Return Guarantee",
-    description: "Free shipping on all orders",
+    title: t("return"),
+    description: t("return1"),
   },
   {
     id: 3,
     url: "Images/delivry.png",
-    title: " Online support 24/7",
-    description: " Technical support 24/7",
+    title: t("sup1"),
+    description: t("sup2"),
   },
   {
     id: 4,
     url: "Images/wallet.png",
-    title: "Secure payment",
-    description: "All payment methods accepted",
+    title: t("secure1"),
+    description: t("secure2"),
   },]
 const winterData = data.filter(item => item.season === "winter");
 const autumnData = data.filter(item => item.season === "autumn");
@@ -35,6 +37,7 @@ const summerData = data.filter(item => item.season === "summer");
 const navigationFun = (item) =>{
   navigate(`/${item}`)
 }
+
   return (
     <div className="home">
       
@@ -45,8 +48,8 @@ const navigationFun = (item) =>{
           </div>
           <div className="right-content">
             <h3>Mattresses</h3>
-            <h2>Natural</h2>
-            <h1>Product</h1>
+            <h2>{t("natural")}</h2>
+            <h1>{t("product")}</h1>
           </div>
         </div>
         <div className="elementor-section">
@@ -66,21 +69,19 @@ const navigationFun = (item) =>{
         <div className="media-section media-section1">
           <div className="text-left-card">
             <h2>100%</h2>
-            <p>Material quality</p>
+            <p>{t("quality")}</p>
           </div>
           <img src="Images/position2.png" alt="" />
           <div className="text-right-card">
-            <h2>Natural Product</h2>
+            <h2>{t("natural")} {t("product")}</h2>
             <p>
-              Has been company that produces cotton fabrics for use all over the
-              world for many years
+            {t("des")}
             </p>
             <button>Collection</button>
           </div>
         </div>
         <div className="winter-collection">
-            <h2>Winter collection</h2>
-            <p>Natural Product</p>
+            <h2>{t("w-col")}</h2>
             <div className="cards">
                 {winterData&&winterData.map((card,index)=>(
                     <div className="card" key={index} onClick={()=>navigationFun(card.name)}>
@@ -95,21 +96,20 @@ const navigationFun = (item) =>{
         <div className="media-section media-section2">
           <div className="text-left-card">
             <h2>100%</h2>
-            <p>Material quality</p>
+            <p>{t("quality")}</p>
           </div>
-          <img src="Images/position3.png" alt="" />
+          <img src="Images/position2.png" alt="" />
           <div className="text-right-card">
-            <h2>Natural Product</h2>
+            <h2>{t("natural")} {t("product")}</h2>
             <p>
-              Has been company that produces cotton fabrics for use all over the
-              world for many years
+            {t("des")}
             </p>
             <button>Collection</button>
           </div>
         </div>
         <div className="autumn-collection">
-            <h2>Autumn collection</h2>
-            <p>Natural Product</p>
+            <h2>{t("a-col")}</h2>
+           
             <div className="cards">
                 {summerData&&summerData.map((card,index)=>(
                     <div onClick={()=>navigationFun(card.name)} className="card" key={index}>
@@ -124,21 +124,20 @@ const navigationFun = (item) =>{
         <div className="media-section media-section3">
           <div className="text-left-card">
             <h2>100%</h2>
-            <p>Material quality</p>
+            <p>{t("quality")}</p>
           </div>
-          <img src="Images/position4.png" alt="" />
+          <img src="Images/position2.png" alt="" />
           <div className="text-right-card">
-            <h2>Natural Product</h2>
+            <h2>{t("natural")} {t("product")}</h2>
             <p>
-              Has been company that produces cotton fabrics for use all over the
-              world for many years
+            {t("des")}
             </p>
             <button>Collection</button>
           </div>
         </div>
         <div className="summer-collection">
-            <h2>Summer collection</h2>
-            <p>Natural Product</p>
+            <h2>{t("su-col")}</h2>
+            
             <div className="cards">
                 {autumnData&&autumnData.map((card,index)=>(
                     <div onClick={()=>navigationFun(card.name)} className="card" key={index}>

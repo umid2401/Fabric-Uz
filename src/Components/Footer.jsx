@@ -1,12 +1,14 @@
 import React from "react";
 import "..//Styles/Footer.scss";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function Footer() {
+  const { t } = useTranslation();
   const routes = [
-    { id: 1, route: "/", name: "Home" },
-    { id: 1, route: "/collection", name: "Collection" },
-    { id: 1, route: "/about", name: "About" },
-    { id: 1, route: "/contact", name: "Contact" },
+    { id: 1, route: "/", name: t("home") },
+    { id: 1, route: "/collection", name: t("collection") },
+    { id: 1, route: "/about", name: t("about") },
+    { id: 1, route: "/contact", name: t("contact") },
   ];
   return (
     <div className="footer">
@@ -18,14 +20,12 @@ export default function Footer() {
             </div>
             <div className="logo-text">
               <p>
-                **Health Benefits**: Quality mattresses promote better sleep
-                posture, which can alleviate back pain and improve overall
-                health.
+                {t("des2")}
               </p>
             </div>
           </div>
           <div className="footer-card card2">
-            <h4>Menu</h4>
+            <h4>{t("menu")}</h4>
             <ul className="footer-links">
               {routes &&
                 routes.map((route, index) => (
@@ -38,7 +38,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-card card3">
-                <h4>Contacts</h4>
+                <h4>{t("contact")} </h4>
                 <ul>
                   <li>Denov, st A.Navoiy 96.</li>
                   <li>mattresses@gmail.com</li>
@@ -49,14 +49,14 @@ export default function Footer() {
                 </ul>
           </div>
           <div className="footer-card card4">
-                <h4>Subscribe to our email</h4>
+                <h4>{t("sub")} </h4>
                 <div className="btn-group">
                   <form action="">
                     <div className="input">
-                      <input type="email" placeholder="Enter Your Email" />
+                      <input type="email" placeholder={t("e-email")} />
                     </div>
                     <div className="btn">
-                      <button type="submit">Subscribe</button>
+                      <button type="submit">{t("sub1")} </button>
                     </div>
                   </form>
                 </div>
