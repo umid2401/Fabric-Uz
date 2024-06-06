@@ -104,7 +104,7 @@ export default function Navbar() {
             </div>
           </div>
           <div onClick={showMobileMenu} className="show-menu">
-            <img src="Images/menu.png" alt="" />
+            <img src="Images/menu3.png" alt="" />
           </div>
           {menuOpen && (
             <div
