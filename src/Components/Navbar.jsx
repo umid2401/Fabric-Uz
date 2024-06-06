@@ -5,21 +5,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeindex, setActiveindex] = useState(0);
   const [showLangs, setShowLangs] = useState(false);
+  const [lang, setLang] = useState(localStorage.getItem("lans")||"English");
+  useEffect(()=>{
+    localStorage.setItem("lans",lang);
+  },[lang]);
+  const { t, i18n } = useTranslation();
   const routes = [
-    { id: 1, route: "/", name: "Home" },
-    { id: 1, route: "/collection", name: "Collection" },
-    { id: 1, route: "/about", name: "About" },
-    { id: 1, route: "/contact", name: "Contact" },
+    { id: 1, route: "/", name: t("home") },
+    { id: 1, route: "/collection", name: t("collection") },
+    { id: 1, route: "/about", name: t("about") },
+    { id: 1, route: "/contact", name: t("contact") },
   ];
-
-  useEffect(() => {
-    const x = localStorage.getItem("index");
-    setActiveindex(+x);
-  }, []);
+  const x = +localStorage.getItem("index");
+  const [activeindex, setActiveindex] = useState(x||0);
+  
   const activeLink = (id) => {
     setActiveindex(id);
     localStorage.setItem("index", id);
@@ -43,7 +46,16 @@ export default function Navbar() {
       setMenuOpen(!menuOpen);
     }
   };
-  const changLanguage = () => {
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('i18nextLngs', lng);
+    if (lng === "uz") {
+      setLang(t("uz"));
+    } else if (lng === "en") {
+      setLang(t("en"));
+    } else {
+      setLang(t("ru"));
+    }
     hideMenu();
     showLang();
   };
@@ -77,7 +89,7 @@ export default function Navbar() {
           <div className="navbar-right">
             <div className="dropdown">
               <button onClick={showLang} className="dropdown-toogle">
-                <span>Menu</span>
+                <span>{lang}</span>
 
                 <FontAwesomeIcon
                   className={`caret ${showLangs ? "caret-t" : ""}`}
@@ -87,15 +99,15 @@ export default function Navbar() {
               </button>
 
               <ul className={`language ${showLangs ? "click" : ""}`}>
-                <li onClick={changLanguage} className="language-item">
+                <li onClick={()=>changeLanguage("uz")} className="language-item">
                   {" "}
                   <img src="Images/uzbekistan.png" alt="" /> <span>UZ</span>
                 </li>
-                <li onClick={changLanguage} className="language-item">
+                <li onClick={()=>changeLanguage("en")} className="language-item">
                   {" "}
                   <img src="Images/russia (2).png" alt="" /> <span>EN</span>
                 </li>
-                <li onClick={changLanguage} className="language-item">
+                <li onClick={()=>changeLanguage("ru")} className="language-item">
                   {" "}
                   <img src="Images/united-kingdom (2).png" alt="" />{" "}
                   <span>RU</span>
@@ -129,13 +141,13 @@ export default function Navbar() {
                   ))}
               </ul>
               <ul className="lang">
-                <li onClick={changLanguage}>
+                <li onClick={()=>changeLanguage("uz")}>
                   <img src="Images/uzbekistan.png" alt="" /> <span>Uz</span>
                 </li>
-                <li onClick={changLanguage}>
+                <li onClick={()=>changeLanguage("en")}>
                   <img src="Images/russia (2).png" alt="" /> <span>EN</span>
                 </li>
-                <li onClick={changLanguage}>
+                <li onClick={()=>changeLanguage("ru")}>
                   <img src="Images/united-kingdom (2).png" alt="" />{" "}
                   <span>RU</span>
                 </li>

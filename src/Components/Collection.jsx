@@ -1,8 +1,10 @@
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Pagination } from 'antd';
 import {data} from "../data";
 import "..//Styles/Collection.scss";
+import { useNavigate } from "react-router-dom";
 export default function Collection() {
   const [active, setActive] = useState(false);
   const [active1, setActive1] = useState(false);
@@ -20,11 +22,24 @@ export default function Collection() {
     console.log(product)
   }
   const dataSort = (sort) =>{
+   
+    if(sort==="sortAscending"){
+      const sortData = product.sort((item1, item2)=>+item2.price-(+item1.price));
+      setProducts(sortData);
+    }
+    else if (sort==="sortDescending"){
+      const sortData = product.sort((item1, item2)=>+item1.price-(+item2.price));
+      setProducts(sortData);
+    }
+    else if(sort==="initialSort"){
+      setProducts(products)
+    }
     setActive1(!active1);
   }
-  // useEffect(()=>{
-  //   dataFilerSeason();
-  // },[])
+  const navigate = useNavigate();
+  const navigationFun = (item) =>{
+    navigate(`/${item}`)
+  }
   return (
     <div className="collection">
       <div className="collection-wrapper">
@@ -65,17 +80,17 @@ export default function Collection() {
            <div className="right-content">
             <button onClick={()=>setActive1(!active1)}>Initial Sort</button>
             <div className={`select ${active1?"active":""}`}>
-              <span onClick={dataSort}>Initial sort</span>
-              <span onClick={dataSort}>Price: ascending</span>
-              <span onClick={dataSort}>Price: descending</span>
-              <span onClick={dataSort}>By popularity</span>
+              <span onClick={()=>dataSort("initialSort")}>Initial sort</span>
+              <span onClick={()=>dataSort("sortAscending")}>Price: ascending</span>
+              <span onClick={()=>dataSort("sortDescending")}>Price: descending</span>
+              <span onClick={()=>dataSort("popularSort")}>By popularity</span>
             </div>
            </div>
           </div>
           <div className="cards">
               {products?(
                 products.map((card,index)=>(
-                  <div className="card" key={index}>
+                  <div onClick={()=>navigationFun(card.name)} className="card" key={index}>
                     <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>
@@ -85,6 +100,9 @@ export default function Collection() {
               ):(
                 <div>Product not found</div>
               )}
+          </div>
+          <div className="pagination">
+          <Pagination  responsive={true} defaultCurrent={1} total={50} />
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ export default function ProductDetail() {
   const { id } = useParams();
   const product = data.filter((item) => item.name === id);
   const [name] = product;
+  console.log(id,product)
   const onChange = (key) => {
     console.log(key);
   };
@@ -24,7 +25,7 @@ export default function ProductDetail() {
 //     },
 //   ];
 
-  console.log(name);
+  
   return (
     <div className="product-detail">
       {name.name === id ? (
@@ -33,7 +34,7 @@ export default function ProductDetail() {
             <div className="product-img">
               {product &&
                 product.map((item, index) => (
-                  <img key={index} src={item.imgUrl} alt={item.className} />
+                  <img key={index} src={item.imgUrl} alt={item.name} />
                 ))}
             </div>
             <div className="product-description">
