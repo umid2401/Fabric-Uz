@@ -51,39 +51,37 @@
       background: rgb(70, 67, 60);
       border-radius: 1.8rem;
       height: 640px;
-
       overflow: hidden;
       .left-content {
         width: 100%;
         overflow: hidden;
-
         z-index: 4;
         img {
-          width: 100%;
+          width: 90%;
           object-fit: cover;
-          transform: translate(-16%, 5%);
+          transform: translate(-20%, 0%);
           height: 100%;
         }
       }
       .right-content {
         position: absolute;
         right: 0;
-        top: 15%;
+        top: 30%;
         z-index: 0;
         overflow: hidden;
         h1 {
           @include styleh1();
           margin: 0;
-          font-size: 9rem;
+          font-size: 8rem;
           text-align: right !important;
-          transform: translate(28%, -10%);
+          transform: translate(0%, 15%);
           color: #f5f5f5;
           text-transform: uppercase;
           font-family: $bold;
         }
         h2 {
           @include styleh1();
-          margin: 0;
+         
 
           text-align: right;
           color: #f5f5f5;
@@ -93,7 +91,7 @@
         h3 {
           @include styleh1();
           margin: 0;
-          font-size: 2.5rem;
+          font-size: 5rem;
           text-align: right;
           color: #f5f5f5;
           font-weight: bold;
@@ -139,7 +137,8 @@
       margin: 12rem 0;
       position: relative;
       width: 100%;
-      height: 280px;
+      height: 300px;
+      padding: 2rem 0;
       img {
         position: absolute;
         left: 50%;
@@ -177,6 +176,7 @@
           font-family: $bold;
           color: #fff;
           margin: 1rem 0;
+          margin-bottom: 0;
           font-size: clamp(32px, 4vw, 45px);
           line-height: 40px;
         }
@@ -184,7 +184,8 @@
           @include stylep();
           line-height: 30px;
           color: #fff;
-          margin: 1.5rem 0;
+          margin: 1rem 0;
+          margin-bottom: .5rem;
           width: 85%;
         }
         button {
@@ -275,11 +276,12 @@
         .right-content {
           top: 20%;
           h1 {
-            font-size: 80px;
-            transform: translateX(35%);
+            font-size: 60px;
+            transform: translate(0, 15%);
           }
           h2 {
             font-size: 50px;
+            margin-bottom: 2rem;
           }
           h3 {
             font-size: 30;
@@ -325,7 +327,7 @@
          margin: 0 auto;
          text-align: center;
          h2, p{
-            margin: .9rem 0;
+            margin: .1rem 0;
          }
          
         }
@@ -377,13 +379,17 @@
           }
         }
         .right-content {
-          top: 28%;
+          top: 50%;
+          transform: translateY(-20%);
           h1 {
             font-size: 30px;
             transform: translateX(0);
+            margin: 1rem 0;
           }
           h2 {
             font-size: 20px;
+            margin: 0;
+            margin: 1rem 0;
           }
           h3 {
             font-size: 16px;

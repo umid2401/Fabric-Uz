@@ -140,10 +140,11 @@
           }
           .select {
             position: absolute;
-            width: 100%;
+            width: 120%;
             right: 0;
             background: #fff;
             opacity: 0;
+           
             transition: .5s ease-in-out;
             &.active{
               opacity: 1;
@@ -248,10 +249,10 @@
             width: 100%;
             
             button{
-              width: 130px;
+              width: 100%;
             }
             .select{
-              width: 150px;
+              width: 100%;
               left: 0;
             }
           }

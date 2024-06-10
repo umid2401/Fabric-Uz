@@ -1,71 +1,76 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/About.scss"
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
 export default function About() {
   const {t}=useTranslation()
   const cards = [
     {
       id: 1,
       description: t("fmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1595526112436-eef3b51d64c6",
+      imgUrl: "Images/diz-52-768x768.jpg",
     },
     {
       id: 2,
       description:t("omatters"),
-      imgUrl: "https://images.unsplash.com/photo-1589382195779-1cedb8e3d8e6",
+      imgUrl: "Images/diz-54-768x768.jpg",
     },
     {
       id: 3,
       description:t("mmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1600488998979-2b4dbb3a0476",
+      imgUrl: "Images/diz-16-768x768.jpg",
     },
     {
       id: 4,
       description:t("lmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1603202114183-091c5a5d8ee1",
+      imgUrl: "Images/diz-17-768x768.jpg",
     },
     {
       id: 5,
       description: t("hmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1583224482747-5f6c3f80f4f3",
+      imgUrl: "Images/diz-19-768x768.jpg",
     },
     {
       id: 6,
       description:t("gmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1620912185364-1528cd3f56bb",
+      imgUrl:"Images/diz-20-768x768.jpg",
     },
     {
       id: 7,
       description: t("amatters"),
-      imgUrl: "https://images.unsplash.com/photo-1600508773045-54b1ac3f0800",
+      imgUrl: "Images/diz-25-768x768.jpg",
     },
     {
       id: 8,
       description:t("wmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1596732412038-94d71a78e29e",
+      imgUrl: "Images/diz-27-768x768.jpg",
     },
     {
       id: 9,
       description: t("fmatters"),
-      imgUrl: "https://images.unsplash.com/photo-1616627890955-ea95d3c86f95",
+      imgUrl: "Images/diz-31-768x768.jpg",
     },
     {
       id: 10,
       description:t("imatters"),
-      imgUrl: "https://images.unsplash.com/photo-1622401194281-97108f2766c5",
+      imgUrl:  "Images/diz-32-768x768.jpg",
     },
   ];
-
+useEffect(()=>{
+  AOS.init({
+    duration:2000,
+  })
+},[])
   return (
     <div className="about">
       <div className="about-wrapper">
         <div className="natural-product">
           <div className="left-box">
-            <h2>{t("natural") } {t("product") } </h2>
+            <h2 data-aos="fade-in">{t("natural") } {t("product") } </h2>
             <div className="boxes">
               {cards &&
                 cards.map((item, index) => (
-                  <div key={index} className="box">
+                  <div data-aos="fade-up" key={index} className="box">
                     <div className="img">
                       <img src={item.imgUrl} alt={item.id} />
                     </div>

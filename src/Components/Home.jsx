@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/Home.scss"
 import { useNavigate } from "react-router-dom";
 import {data} from "../data";
 import { useTranslation } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const navigate = useNavigate();
+  useEffect(()=>{
+    AOS.init({
+      duration:2000,
+    })
+  },[])
   const {t}=useTranslation();
   const card = [{
     id: 1,
@@ -36,6 +43,13 @@ const autumnData = data.filter(item => item.season === "autumn");
 const summerData = data.filter(item => item.season === "summer");
 const navigationFun = (item) =>{
   navigate(`/${item}`)
+}
+const toCollect=()=>{
+  navigate("/collection");
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
   return (
@@ -77,18 +91,18 @@ const navigationFun = (item) =>{
             <p>
             {t("des")}
             </p>
-            <button>Collection</button>
+            <button onClick={toCollect}>Collection</button>
           </div>
         </div>
         <div className="winter-collection">
             <h2>{t("w-col")}</h2>
             <div className="cards">
                 {winterData&&winterData.map((card,index)=>(
-                    <div className="card" key={index} onClick={()=>navigationFun(card.name)}>
+                    <div data-aos="fade-up" className="card" key={index} onClick={()=>navigationFun(card.name)}>
                         <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>
-                        <p>{card.name}</p>
+                        <p>{card.name_en}</p>
                     </div>
                 ))}
             </div>
@@ -104,10 +118,10 @@ const navigationFun = (item) =>{
             <p>
             {t("des")}
             </p>
-            <button>Collection</button>
+            <button onClick={toCollect}>Collection</button>
           </div>
         </div>
-        <div className="autumn-collection">
+        <div data-aos="fade-up" className="autumn-collection">
             <h2>{t("a-col")}</h2>
            
             <div className="cards">
@@ -116,7 +130,7 @@ const navigationFun = (item) =>{
                         <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>
-                        <p>{card.name}</p>
+                        <p>{card.name_en}</p>
                     </div>
                 ))}
             </div>
@@ -132,7 +146,7 @@ const navigationFun = (item) =>{
             <p>
             {t("des")}
             </p>
-            <button>Collection</button>
+            <button onClick={toCollect}>Collection</button>
           </div>
         </div>
         <div className="summer-collection">
@@ -140,11 +154,11 @@ const navigationFun = (item) =>{
             
             <div className="cards">
                 {autumnData&&autumnData.map((card,index)=>(
-                    <div onClick={()=>navigationFun(card.name)} className="card" key={index}>
+                    <div data-aos="fade-up" onClick={()=>navigationFun(card.name)} className="card" key={index}>
                         <div className="img">
                             <img src={card.imgUrl} alt={card.name} />
                         </div>
-                        <p>{card.name}</p>
+                        <p>{card.name_en}</p>
                     </div>
                 ))}
             </div>
