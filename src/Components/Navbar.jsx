@@ -67,7 +67,7 @@ export default function Navbar() {
             <div className="navbar-logo">
               {/* <img src="Images/fabric.png" alt="Logo is not" /> */}
               <Link to="/">
-              <img src="Images/logo.png" alt="" />
+              <img src="Images/logos1.png" alt="" />
               </Link>
             </div>
             <ul className="navbar-links">
