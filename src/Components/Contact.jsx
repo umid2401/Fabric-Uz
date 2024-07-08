@@ -33,7 +33,7 @@ export default function Contact({data}) {
         number1.current.value="";
         textarea.current.value="";
         Modal.success({
-          content: 'Data succesfull',
+          content: 'Your information has been successfully submitted!',
         });
       } catch (err){
         console.log(err)
@@ -42,7 +42,7 @@ export default function Contact({data}) {
     else{
 
       Modal.warning({
-        content: 'Input is empty',
+        content: 'Please fill out the field!',
       });
     }
   }

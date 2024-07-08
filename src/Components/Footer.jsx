@@ -56,7 +56,7 @@ export default function Footer(props) {
           <div className="footer-card card1">
             <div className="logo">
               <Link to="/" onClick={scrollTop}>
-              <img src="Images/logos1.png" alt="" />
+              <img src="Images/npfabric.png" alt="" />
               </Link>
             </div>
             <div className="logo-text">
